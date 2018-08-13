@@ -53,6 +53,7 @@ dkms.conf
 
 # Personal
 bin
+conway
 
 # vim
 *.swp

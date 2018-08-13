@@ -1,10 +1,10 @@
 CC=gcc
 FLAGS=-O2 -Wall -Werror -lncurses
 OBJ=cell_space.o  input.o  output.o conway.o
+BIN=conway
 
 conway: $(OBJ)
-	mkdir bin
-	$(CC) -o bin/$@ $^ $(FLAGS)
+	$(CC) -o $@ $^ $(FLAGS)
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
@@ -14,4 +14,4 @@ conway: $(OBJ)
 
 clean:
 	rm *.o
-	rm bin/*
+	rm $(BIN)

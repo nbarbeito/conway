@@ -6,8 +6,9 @@
 #include "output.h"
 
 int main(int argc, char** argv) {
-    if (argc < 1)
+    if (argc < 2) {
         exit(-1);
+    }
 
     CellSpace *cs = create_from_file(argv[1]);
     show_transitions(cs, 1000000);
